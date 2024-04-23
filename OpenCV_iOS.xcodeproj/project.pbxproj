@@ -19,6 +19,8 @@
 		CB9852FB2BD6AB0B001512D3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9852FA2BD6AB0B001512D3 /* CoreFoundation.framework */; };
 		CB9852FD2BD6AB2C001512D3 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9852FC2BD6AB2C001512D3 /* opencv2.framework */; };
 		CB9853002BD6AB41001512D3 /* Wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CB9852FF2BD6AB41001512D3 /* Wrapper.mm */; };
+		CB9853042BD7B876001512D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9853032BD7B876001512D3 /* UIKit.framework */; };
+		CB9853052BD7EA74001512D3 /* Wrapper.h in Sources */ = {isa = PBXBuildFile; fileRef = CB9853012BD6AB63001512D3 /* Wrapper.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,7 @@
 		CB9852FF2BD6AB41001512D3 /* Wrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Wrapper.mm; sourceTree = "<group>"; };
 		CB9853012BD6AB63001512D3 /* Wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wrapper.h; sourceTree = "<group>"; };
 		CB9853022BD6AC0F001512D3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CB9853032BD7B876001512D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9853042BD7B876001512D3 /* UIKit.framework in Frameworks */,
 				CB9852FB2BD6AB0B001512D3 /* CoreFoundation.framework in Frameworks */,
 				CB9852F92BD6AAF7001512D3 /* Accelerate.framework in Frameworks */,
 				CB9852F72BD6AAF2001512D3 /* CoreGraphics.framework in Frameworks */,
@@ -95,6 +99,7 @@
 		CB9852F32BD6AAE9001512D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB9853032BD7B876001512D3 /* UIKit.framework */,
 				CB9852FA2BD6AB0B001512D3 /* CoreFoundation.framework */,
 				CB9852F82BD6AAF7001512D3 /* Accelerate.framework */,
 				CB9852F62BD6AAF2001512D3 /* CoreGraphics.framework */,
@@ -176,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9853052BD7EA74001512D3 /* Wrapper.h in Sources */,
 				CB9852E42BD6AAD6001512D3 /* ViewController.swift in Sources */,
 				CB9853002BD6AB41001512D3 /* Wrapper.mm in Sources */,
 				CB9852E02BD6AAD6001512D3 /* AppDelegate.swift in Sources */,
@@ -335,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LWQM3M945B;
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -373,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LWQM3M945B;
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -390,6 +398,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "es.ua.eps.OpenCV-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

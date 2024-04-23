@@ -9,9 +9,12 @@
 #define Wrapper_h
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIImageView.h>
  
+@class ViewController;
 @interface Wrapper: NSObject
-+ (NSString *)openCVVersionString;
+    - (NSString *)openCVVersionString;
+    - (id)initWithController:(ViewController*)c andImageView:(UIImageView*)iv;
 @end
 
 #endif /* Wrapper_h */

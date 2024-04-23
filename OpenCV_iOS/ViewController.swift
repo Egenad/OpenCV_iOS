@@ -6,13 +6,20 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var wrapper: Wrapper?
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("\(String(describing: Wrapper.openCVVersionString()))")
+        wrapper = Wrapper(controller: self, andImageView: imageView)
+        
+        print("\(String(describing: wrapper?.openCVVersionString()))")
     }
 
 
