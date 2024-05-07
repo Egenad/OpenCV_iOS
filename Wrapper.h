@@ -15,6 +15,11 @@
 @interface Wrapper: NSObject
     - (NSString *)openCVVersionString;
     - (id)initWithController:(ViewController*)c andImageView:(UIImageView*)iv;
+    - (void)changePause:(bool)state;
+    - (void)updateOrientation;
+    - (void)setGradient:(int)gr;
+    - (void)setBlur:(int)blr;
+    - (void)setAngle:(int)agl;
 @end
 
 #endif /* Wrapper_h */

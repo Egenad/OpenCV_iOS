@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB514EC42BE3DBB000A8F05F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB514EC32BE3DBB000A8F05F /* AssetsLibrary.framework */; };
+		CB514EC62BE3DBBA00A8F05F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB514EC52BE3DBBA00A8F05F /* AVFoundation.framework */; };
+		CB514EC82BE3DBC600A8F05F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB514EC72BE3DBC600A8F05F /* CoreImage.framework */; };
+		CB514ECA2BE3DBD100A8F05F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB514EC92BE3DBD100A8F05F /* CoreVideo.framework */; };
+		CB514ECC2BE3DBDC00A8F05F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB514ECB2BE3DBDC00A8F05F /* QuartzCore.framework */; };
+		CB514ECE2BE3DBF600A8F05F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB514ECD2BE3DBF600A8F05F /* Foundation.framework */; };
 		CB9852E02BD6AAD6001512D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9852DF2BD6AAD6001512D3 /* AppDelegate.swift */; };
 		CB9852E22BD6AAD6001512D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9852E12BD6AAD6001512D3 /* SceneDelegate.swift */; };
 		CB9852E42BD6AAD6001512D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9852E32BD6AAD6001512D3 /* ViewController.swift */; };
@@ -24,6 +30,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB514EC32BE3DBB000A8F05F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		CB514EC52BE3DBBA00A8F05F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CB514EC72BE3DBC600A8F05F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		CB514EC92BE3DBD100A8F05F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		CB514ECB2BE3DBDC00A8F05F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CB514ECD2BE3DBF600A8F05F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CB9852DC2BD6AAD6001512D3 /* OpenCV_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCV_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9852DF2BD6AAD6001512D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB9852E12BD6AAD6001512D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +61,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB514ECE2BE3DBF600A8F05F /* Foundation.framework in Frameworks */,
+				CB514ECC2BE3DBDC00A8F05F /* QuartzCore.framework in Frameworks */,
+				CB514ECA2BE3DBD100A8F05F /* CoreVideo.framework in Frameworks */,
+				CB514EC82BE3DBC600A8F05F /* CoreImage.framework in Frameworks */,
+				CB514EC62BE3DBBA00A8F05F /* AVFoundation.framework in Frameworks */,
+				CB514EC42BE3DBB000A8F05F /* AssetsLibrary.framework in Frameworks */,
 				CB9853042BD7B876001512D3 /* UIKit.framework in Frameworks */,
 				CB9852FB2BD6AB0B001512D3 /* CoreFoundation.framework in Frameworks */,
 				CB9852F92BD6AAF7001512D3 /* Accelerate.framework in Frameworks */,
@@ -99,6 +117,12 @@
 		CB9852F32BD6AAE9001512D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB514ECD2BE3DBF600A8F05F /* Foundation.framework */,
+				CB514ECB2BE3DBDC00A8F05F /* QuartzCore.framework */,
+				CB514EC92BE3DBD100A8F05F /* CoreVideo.framework */,
+				CB514EC72BE3DBC600A8F05F /* CoreImage.framework */,
+				CB514EC52BE3DBBA00A8F05F /* AVFoundation.framework */,
+				CB514EC32BE3DBB000A8F05F /* AssetsLibrary.framework */,
 				CB9853032BD7B876001512D3 /* UIKit.framework */,
 				CB9852FA2BD6AB0B001512D3 /* CoreFoundation.framework */,
 				CB9852F82BD6AAF7001512D3 /* Accelerate.framework */,
@@ -341,7 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LWQM3M945B;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -380,7 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LWQM3M945B;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

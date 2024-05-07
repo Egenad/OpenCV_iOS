@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="ipad7_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,24 +12,74 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenCV_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="744" height="1133"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bjL-NU-SG9">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bjL-NU-SG9">
+                                <rect key="frame" x="0.0" y="24" width="744" height="1089"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaG-tF-m6M">
+                                <rect key="frame" x="347" y="1063" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8EP-ZK-BSS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="9ea-Qc-56R"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="play.fill" catalog="system" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="playButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bFc-8F-3K4"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="DMO-aZ-Yge">
+                                <rect key="frame" x="48" y="1015" width="648" height="31"/>
+                                <connections>
+                                    <action selector="angleValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="DN3-Ll-31b"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="19" translatesAutoresizingMaskIntoConstraints="NO" id="TSP-47-59g">
+                                <rect key="frame" x="48" y="941" width="648" height="31"/>
+                                <connections>
+                                    <action selector="blurValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Tfv-7v-r9C"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="80" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="e6K-IB-YBp">
+                                <rect key="frame" x="48" y="978" width="648" height="31"/>
+                                <connections>
+                                    <action selector="gradientValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="g0w-BK-KtN"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bjL-NU-SG9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0Nd-fe-biE"/>
-                            <constraint firstItem="bjL-NU-SG9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L56-hY-tVe"/>
-                            <constraint firstItem="bjL-NU-SG9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="j9j-TY-zRW"/>
-                            <constraint firstItem="bjL-NU-SG9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zWi-BR-IMf"/>
+                            <constraint firstItem="DMO-aZ-Yge" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5C7-gJ-4xv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TSP-47-59g" secondAttribute="trailing" constant="50" id="5ro-sf-S0U"/>
+                            <constraint firstItem="FaG-tF-m6M" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Aue-fm-zgR"/>
+                            <constraint firstItem="FaG-tF-m6M" firstAttribute="bottom" secondItem="bjL-NU-SG9" secondAttribute="bottom" id="Bxz-35-jHP"/>
+                            <constraint firstItem="e6K-IB-YBp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FRU-UA-uQ1"/>
+                            <constraint firstItem="TSP-47-59g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sdn-O9-3yU"/>
+                            <constraint firstItem="DMO-aZ-Yge" firstAttribute="top" secondItem="e6K-IB-YBp" secondAttribute="bottom" constant="7" id="SjW-gu-6G7"/>
+                            <constraint firstItem="FaG-tF-m6M" firstAttribute="top" secondItem="DMO-aZ-Yge" secondAttribute="bottom" constant="18" id="aGX-h6-fBc"/>
+                            <constraint firstItem="bjL-NU-SG9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fLl-c3-GS8"/>
+                            <constraint firstItem="FaG-tF-m6M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fTL-mr-aQ6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DMO-aZ-Yge" secondAttribute="trailing" constant="50" id="h17-Bv-kQ9"/>
+                            <constraint firstItem="e6K-IB-YBp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hfQ-hH-f2j"/>
+                            <constraint firstItem="bjL-NU-SG9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hrW-MW-20b"/>
+                            <constraint firstItem="bjL-NU-SG9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kAh-wh-yyj"/>
+                            <constraint firstItem="e6K-IB-YBp" firstAttribute="top" secondItem="TSP-47-59g" secondAttribute="bottom" constant="7" id="lLe-VL-G8D"/>
+                            <constraint firstItem="bjL-NU-SG9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ll2-Fc-1wp"/>
+                            <constraint firstItem="TSP-47-59g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="oUe-1L-Fdy"/>
+                            <constraint firstItem="DMO-aZ-Yge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ra8-ZP-ZYs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e6K-IB-YBp" secondAttribute="trailing" constant="50" id="uzX-OL-6gV"/>
+                            <constraint firstItem="FaG-tF-m6M" firstAttribute="centerX" secondItem="bjL-NU-SG9" secondAttribute="centerX" id="x5J-DV-Roz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="angleSeekBar" destination="DMO-aZ-Yge" id="lPB-WF-dt6"/>
+                        <outlet property="blurSeekBar" destination="TSP-47-59g" id="QAM-zV-DXw"/>
+                        <outlet property="gradientSeekBar" destination="e6K-IB-YBp" id="A6m-h7-p5M"/>
                         <outlet property="imageView" destination="bjL-NU-SG9" id="fHQ-tl-gT0"/>
+                        <outlet property="playButton" destination="FaG-tF-m6M" id="bz8-Kv-8TR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -37,4 +87,7 @@
             <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+    </resources>
 </document>
